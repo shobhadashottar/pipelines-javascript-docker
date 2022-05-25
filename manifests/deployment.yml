@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shobhadashottarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shobhadashottarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: shobhadashottarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shobhadashottarpipelinesjavascriptdocker 
+          image: shobhacontainerregistry.azurecr.io/shobhadashottarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
